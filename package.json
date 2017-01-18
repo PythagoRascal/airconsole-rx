@@ -1,0 +1,28 @@
+{
+  "name": "airconsole-rx",
+  "version": "1.6.0",
+  "description": "AirConsole-Rx wraps AirConsole's events in RxJS observables",
+  "main": "airconsole-rx.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {
+    "rxjs": "^5.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "airconsole",
+    "rx",
+    "rxjs",
+    "reactive",
+    "extensions",
+    "observable"
+  ],
+  "author": "PythagoRascal",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/PythagoRascal/airconsole-rx.git"
+  },
+  "license": "MIT"
+}
