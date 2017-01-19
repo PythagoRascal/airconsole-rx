@@ -4,12 +4,17 @@
   "description": "AirConsole-Rx wraps AirConsole's events in RxJS observables",
   "main": "airconsole-rx.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  },
   "peerDependencies": {
     "rxjs": "^5.0.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run serve & npm run open",
+    "serve": "http-server -s",
+    "open": "google-chrome 'http://www.airconsole.com/#http://192.168.1.32:8080/example/'"
   },
   "keywords": [
     "airconsole",
@@ -21,8 +26,8 @@
   ],
   "author": "PythagoRascal",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/PythagoRascal/airconsole-rx.git"
+    "type": "git",
+    "url": "https://github.com/PythagoRascal/airconsole-rx.git"
   },
   "license": "MIT"
 }
