@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="../node_modules/rxjs/bundles/Rx.js"></script>
+    <script type="text/javascript" src="https://www.airconsole.com/api/airconsole-1.6.0.js"></script>
+    <script type="text/javascript" src="../airconsole-rx.js"></script>
+    <style type="text/css">
+      ul li { color: #ffffff; }
+    </style>
+  </head>
+  <body>
+    <ul id="list"></ul>
+    <script type="text/javascript">
+      var airconsoleRx = new AirConsoleRx();
+      var list = document.getElementById('list');
+
+      airconsoleRx.onConnect.subscribe(function(result) {
+        var element = document.createElement('li');
+        element.innerText = ('connected: ' + result.deviceId);
+        list.appendChild(element);
+      });
+
+      airconsoleRx.onDisconnect.subscribe(function(result) {
+        var element = document.createElement('li');
+        element.innerText = ('disconnected: ' + result.deviceId);
+        list.appendChild(element);
+      });
+    </script>
+  </body>
+</html>
